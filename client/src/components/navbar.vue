@@ -5,10 +5,10 @@
             <b-navbar-toggle target="navCol"/>
             <b-collapse id="navCol" isNav>
                 <b-navbar-nav>
-                    <b-nav-item to="#">Główna</b-nav-item>
-                    <b-nav-item to="#">Promocje</b-nav-item>
-                    <b-nav-item to="#">O nas</b-nav-item>
-                    <b-nav-item to="#">Kontakt</b-nav-item>
+                    <b-nav-item to="/">Główna</b-nav-item>
+                    <b-nav-item to="/promo">Promocje</b-nav-item>
+                    <b-nav-item to="/about">O nas</b-nav-item>
+                    <b-nav-item to="/contact">Kontakt</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -22,5 +22,8 @@ export default {
 <style lang="scss" scoped>
 .topbar{
     background-color: rgb(52, 142, 207);
+}
+.router-link-exact-active{
+    color: white!important;
 }
 </style>

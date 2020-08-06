@@ -10,17 +10,17 @@
       img-width="100%"
       img-height="100%">
         <b-carousel-slide
-          img-src="https://picsum.photos/1024/480/?image=10">
+          img-src="@/assets/header2.jpg">
             <div class="d-flex h-100 align-items-center justify-content-center">
               <div>
-                <h1>What is Lorem Ipsum?</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h1>NazwaFirmy</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
               </div>
             </div>
           </b-carousel-slide>
       </b-carousel>
       <b-container>
-        <b-row>
+        <b-row class="padinBoxes">
           <b-col md='6'>
             <img src="@/assets/supplies.png" style="width:95%;height:auto;">
           </b-col>
@@ -30,7 +30,7 @@
         </b-row>
       </b-container>
       <b-container>
-        <b-row style="background: rgb(244,244,244)">
+        <b-row style="background: rgb(244,244,244)" class="padinBoxes">
           <b-col md='6' class="vCenter">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
@@ -40,12 +40,20 @@
         </b-row>
       </b-container>
       <b-container>
-        <b-row>
+        <b-row class="padinBoxes">
           <b-col md='6'>
             <img src="@/assets/laptop.png" style="width:95%;height:auto;">
           </b-col>
           <b-col md='6' class="vCenter">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
+          </b-col>
+        </b-row>
+        <b-row style="background: rgb(244,244,244)" class="padinBoxes">
+          <b-col md='6' class="vCenter">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
+          </b-col>
+          <b-col md='6'>
+            <img src="@/assets/security.jpg" style="width:95%;height:auto;">
           </b-col>
         </b-row>
       </b-container>
@@ -76,6 +84,9 @@ export default {
 .vCenter{
   display: grid;
   place-items: center;
+}
+.padinBoxes{
+  padding: 1rem
 }
 .carousel .carousel-inner .carousel-item .carousel-caption{
   bottom:40%!important;
