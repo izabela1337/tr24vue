@@ -10,6 +10,9 @@
                     <b-nav-item to="/about">O nas</b-nav-item>
                     <b-nav-item to="/contact">Kontakt</b-nav-item>
                 </b-navbar-nav>
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-item to="/shop">Sklep<b-badge>nowe!</b-badge></b-nav-item>
+                </b-navbar-nav>
             </b-collapse>
         </b-navbar>
     </b-container>  
@@ -21,7 +24,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topbar{
-    background-color: rgb(52, 142, 207);
+    background-color: #5C55AF;
 }
 .router-link-exact-active{
     color: white!important;

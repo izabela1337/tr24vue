@@ -4,13 +4,13 @@
       <b-carousel
       class="carousel-center"
       id="carousel-fade"
-      style="text-shadow: 0px 0px 2px #000"
+      style="text-shadow: 0px 0px 5px #000"
       fade
       indicators
-      img-width="100%"
-      img-height="100%">
+      img-width="800px"
+      img-height="300px">
         <b-carousel-slide
-          img-src="@/assets/header2.jpg">
+          img-src="@/assets/header2wide.jpg">
             <div class="d-flex h-100 align-items-center justify-content-center">
               <div>
                 <h1>NazwaFirmy</h1>
@@ -18,8 +18,17 @@
               </div>
             </div>
           </b-carousel-slide>
+        <b-carousel-slide
+          img-src="@/assets/header.jpg">
+            <div class="d-flex h-100 align-items-center justify-content-center">
+              <div>
+                <h1>Cacao</h1>
+                <p>Deco moreno. Najwyższa jakość.</p>
+              </div>
+            </div>
+          </b-carousel-slide>
       </b-carousel>
-      <b-container>
+      <b-container class="strpped">
         <b-row class="padinBoxes">
           <b-col md='6'>
             <img src="@/assets/supplies.png" style="width:95%;height:auto;">
@@ -29,8 +38,8 @@
           </b-col>
         </b-row>
       </b-container>
-      <b-container>
-        <b-row style="background: rgb(244,244,244)" class="padinBoxes">
+      <b-container class="strpped">
+        <b-row style="background: #ece7f0" class="padinBoxes">
           <b-col md='6' class="vCenter">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
@@ -39,7 +48,7 @@
           </b-col>
         </b-row>
       </b-container>
-      <b-container>
+      <b-container class="strpped">
         <b-row class="padinBoxes">
           <b-col md='6'>
             <img src="@/assets/laptop.png" style="width:95%;height:auto;">
@@ -48,7 +57,7 @@
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
         </b-row>
-        <b-row style="background: rgb(244,244,244)" class="padinBoxes">
+        <b-row style="background: #ece7f0" class="padinBoxes">
           <b-col md='6' class="vCenter">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
@@ -72,13 +81,14 @@ export default {
 <style lang="scss" scoped>
 .backgroundContainer{
   height: 100%;
-  background: rgb(66,55,205);
-  background: linear-gradient(90deg, rgb(102, 95, 194) 10%, rgba(0,212,255,1) 75%);
+  background: #3777CD;
+  // background: linear-gradient(90deg, rgb(102, 95, 194) 10%, rgba(0,212,255,1) 75%);
 }
 .whiteNigga{
   padding: 0;
   height: 100%;
-  width: 80%;
+  width: 90%;
+  min-width: 80%;
   background: white;
 }
 .vCenter{
@@ -86,7 +96,13 @@ export default {
   place-items: center;
 }
 .padinBoxes{
-  padding: 1rem
+  padding: 1rem;
+  margin:0;
+}
+.strpped{
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
 }
 .carousel .carousel-inner .carousel-item .carousel-caption{
   bottom:40%!important;

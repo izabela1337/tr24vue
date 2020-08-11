@@ -17,8 +17,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 footer{
+    color: white;
     padding: 2rem;
     text-align: center;
-    background: wheat;
+    background-color: #5C55AF;
 }
 </style>
