@@ -1,46 +1,72 @@
 <template>
-    <b-container fluidclass="mainContainer">
+    <b-container class="mainContainer">
         <b-row>
             <b-col cols="3">
                 <b-container class="sideBar">
-                        <b-collapse id="collapse-1" class="mt-2" visible>
-                            <b-form-group label="Wybierz opcje filtru 1">
-                                <b-form-checkbox-group
-                                    v-model="selected"
-                                    :options="options"
-                                    name="flavour-2a"
-                                    stacked>
-                                </b-form-checkbox-group>
-                            </b-form-group>
-                        </b-collapse>
-                        <b-button v-b-toggle.collapse-1 class="m-1">Filtr 1 <b-icon-caret-up-fill /></b-button>
-                        <hr/>
-                        <b-collapse id="collapse-2" class="mt-2">
-                            <b-form-group label="Wybierz opcje filtru 2">
-                                <b-form-checkbox-group
-                                    v-model="selected"
-                                    :options="options"
-                                    name="flavour-2a"
-                                    stacked>
-                                </b-form-checkbox-group>
-                            </b-form-group>
-                        </b-collapse>
-                        <b-button v-b-toggle.collapse-2 class="m-1">Filtr 2 <b-icon-caret-down-fill /></b-button>
-                        <hr/>
-                        <b-collapse id="collapse-3" class="mt-2">
-                            <b-form-group label="Wybierz opcje filtru 3">
-                                <b-form-checkbox-group
-                                    v-model="selected"
-                                    :options="options"
-                                    name="flavour-2a"
-                                    stacked>
-                                </b-form-checkbox-group>
-                            </b-form-group>
-                        </b-collapse>
-                        <b-button v-b-toggle.collapse-3 class="m-1">Filtr 3 <b-icon-caret-down-fill /></b-button>
+                    <label>Szukaj po nazwie</label>
+                    <b-form-input v-model="text" placeholder="Wyszukajcośtam"></b-form-input>
+                    <hr>
+                    <b-collapse id="collapse-1" class="mt-2" visible>
+                        <b-form-group label="Wybierz opcje filtru 1">
+                            <b-form-checkbox-group
+                                v-model="selected"
+                                :options="options"
+                                name="flavour-2a"
+                                stacked>
+                            </b-form-checkbox-group>
+                        </b-form-group>
+                    </b-collapse>
+                    <b-button v-b-toggle.collapse-1 class="m-1">Filtr 1 <b-icon-caret-up-fill /></b-button>
+                    <hr/>
+                    <b-collapse id="collapse-2" class="mt-2">
+                        <b-form-group label="Wybierz opcje filtru 2">
+                            <b-form-checkbox-group
+                                v-model="selected"
+                                :options="options"
+                                name="flavour-2a"
+                                stacked>
+                            </b-form-checkbox-group>
+                        </b-form-group>
+                    </b-collapse>
+                    <b-button v-b-toggle.collapse-2 class="m-1">Filtr 2 <b-icon-caret-down-fill /></b-button>
+                    <hr/>
+                    <b-collapse id="collapse-3" class="mt-2">
+                        <b-form-group label="Wybierz opcje filtru 3">
+                            <b-form-checkbox-group
+                                v-model="selected"
+                                :options="options"
+                                name="flavour-2a"
+                                stacked>
+                            </b-form-checkbox-group>
+                        </b-form-group>
+                    </b-collapse>
+                    <b-button v-b-toggle.collapse-3 class="m-1">Filtr 3 <b-icon-caret-down-fill /></b-button>
                 </b-container>
             </b-col>
             <b-col cols="9" class="mainContent">
+                <b-carousel
+                id="carousel-1"
+                v-model="slide"
+                :interval="4000"
+                controls
+                indicators
+                background="#ababab"
+                img-width="1024"
+                img-height="480"
+                style="text-shadow: 1px 1px 2px #333; margin: 10px 0 10px"
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd">
+                <b-carousel-slide
+                    caption="First slide"
+                    text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+                    img-src="https://i.kym-cdn.com/entries/icons/facebook/000/016/546/hidethepainharold.jpg"
+                ></b-carousel-slide>
+                <b-carousel-slide
+                    caption="Second slide"
+                    text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+                    img-src="https://i.kym-cdn.com/entries/icons/facebook/000/016/546/hidethepainharold.jpg"
+                ></b-carousel-slide>
+                </b-carousel>
                 <b-row>
                     <b-col lg="3" cols="6">
                         <b-card
@@ -197,6 +223,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sideBar{
+    margin: 10px 0 10px 0;
     position: sticky;
     top: 10px;
     padding: 10px;
@@ -205,5 +232,6 @@ export default {
 }
 .mainContent{
     // background: #3777CD;
+    text-align: left;
 }
 </style>

@@ -22,6 +22,18 @@ Vue.use(VueRouter)
     path: '/shop',
     name: 'Sklep',
     component: () => import('../views/Shop.vue')
+  },
+  {
+    path: '/shop/item/:proID?',
+    name: 'Product Page',
+    component: () => import('../views/Item.vue')
+  },
+  //err pages
+  {
+    path:'/*',
+    name: '404 error - strony nie znaleziono',
+    component: () => import('../views/err/404.vue')
+
   }
 ]
 
