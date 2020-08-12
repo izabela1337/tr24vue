@@ -1,4 +1,6 @@
 <template>
+<span>
+    <navBarShop />
     <b-container class="mainContainer">
         <b-row>
             <b-col cols="3">
@@ -81,7 +83,7 @@
                                 <h5><b>21.37 zł</b></h5>
                             Being alive is suffering. On the other side, you don't have to be alive, so thats good.
                             </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
+                        <b-button to="/shop/item" variant="primary">Buy shit</b-button>
                         </b-card>
                     </b-col>
                     <b-col lg="3" cols="6">
@@ -200,8 +202,10 @@
             </b-col>
         </b-row>
     </b-container>
+</span>
 </template>
 <script>
+import navBarShop from '@/components/navbarShop.vue';
 import {BIconCaretDownFill, BIconCaretUpFill} from 'bootstrap-vue';
 export default {
     data(){
@@ -216,6 +220,7 @@ export default {
             }
     },
     components: {
+        navBarShop,
         BIconCaretDownFill,
         BIconCaretUpFill
     }
@@ -233,5 +238,7 @@ export default {
 .mainContent{
     // background: #3777CD;
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
 </style>

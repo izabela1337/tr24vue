@@ -1,4 +1,6 @@
 <template>
+<b-container fluid style="margin:0;padding:0">
+  <navBar />
   <b-container fluid class="backgroundContainer">
     <b-container class="whiteNigga">
       <b-carousel
@@ -68,13 +70,16 @@
       </b-container>
     </b-container>
   </b-container>
+</b-container>
 </template>
 
 <script>
+import navBar from '@/components/navbar.vue';
 
 export default {
   name: 'Home',
   components: {
+    navBar
   }
 }
 </script>

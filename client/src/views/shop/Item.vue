@@ -1,4 +1,6 @@
 <template>
+<span>
+    <navBarShop />
     <b-container>
         <b-row class="itemView">
             <b-col md="5">
@@ -11,7 +13,7 @@
                         <p class="text-muted">kategoria produktu</p>
                     </b-col>
                     <b-col class="itemDescPrice">
-                        <h2>21.37 + vat + akcyzja + pensja dla miliona urzędników</h2>
+                        <h2>21.37 zł + vat</h2>
                     </b-col>
                     <b-col md="12" class="itemDescAddToCart">
                         <label for="sb-inline">Podaj ilość</label>
@@ -45,13 +47,20 @@
                             <b-img fluid src="https://hookagency.com/wp-content/uploads/2018/02/grandma-with-gun-1200x675.jpg" />
                         </b-card-text>
                     </b-tab>
+                    <b-tab title="Koszty dostawy czy coś idk">
+                        <b-card-text>
+                            <h1>test test 123</h1>
+                        </b-card-text>
+                    </b-tab>
                     </b-tabs>
                 </b-card>
             </b-col>
         </b-row>
     </b-container>
+</span>
 </template>
 <script>
+import navBarShop from '@/components/navbarShop.vue';
 export default {
     data() {
       return {
@@ -63,6 +72,9 @@ export default {
           { text: 'XXXXXL', value: 'grape' }
         ]
       }
+    },
+    components: {
+        navBarShop
     }
 }
 </script>
@@ -72,9 +84,8 @@ export default {
 }
 .itemDesc{
     text-align: left;
-    display: inline-block;
-    vertical-align: middle;
-    // place-items: center;
+    display: grid;
+    place-items: center;
 }
 .itemDescPrice{
     text-align: right;

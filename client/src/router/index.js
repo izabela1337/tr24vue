@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
   const routes = [
+  //static pages
   {
     path: '/',
     name: 'Home',
@@ -18,15 +19,16 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
+  //shop pages
   {
     path: '/shop',
     name: 'Sklep',
-    component: () => import('../views/Shop.vue')
+    component: () => import('../views/shop/Shop.vue')
   },
   {
     path: '/shop/item/:proID?',
     name: 'Product Page',
-    component: () => import('../views/Item.vue')
+    component: () => import('../views/shop/Item.vue')
   },
   //err pages
   {
