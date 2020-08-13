@@ -70,9 +70,8 @@
                 ></b-carousel-slide>
                 </b-carousel>
                 <b-row>
-                    <b-col lg="3" cols="6">
+                    <b-col lg="3" cols="6" v-for="(items, index) in items" :key="index">
                         <b-card
-                        title="End my life!"
                         img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
                         img-alt="Image"
                         img-top
@@ -80,122 +79,11 @@
                         style="max-width: 20rem;"
                         class="mb-2">
                             <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
+                                <h4>{{items.name}}</h4>
+                                <h5><b>{{items.price}}</b></h5>
                             Being alive is suffering. On the other side, you don't have to be alive, so thats good.
                             </b-card-text>
                         <b-button to="/shop/item" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
-                        </b-card>
-                    </b-col>
-                    <b-col lg="3" cols="6">
-                        <b-card
-                        title="End my life!"
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
-                        img-alt="Image"
-                        img-top
-                        tag="article"
-                        style="max-width: 20rem;"
-                        class="mb-2">
-                            <b-card-text>
-                                <h5><b>21.37 zł</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
-                            </b-card-text>
-                        <b-button href="#" variant="primary">Buy shit</b-button>
                         </b-card>
                     </b-col>
                 </b-row>
@@ -206,10 +94,13 @@
 </template>
 <script>
 import navBarShop from '@/components/navbarShop.vue';
+import dbModule from "@/axios/dbModule.js";
 import {BIconCaretDownFill, BIconCaretUpFill} from 'bootstrap-vue';
+
 export default {
     data(){
         return{
+            items: [],
             selected: [],
             options: [
                 { text: 'Orange', value: 'orange' },
@@ -217,7 +108,20 @@ export default {
                 { text: 'Pineapple', value: 'pineapple' },
                 { text: 'Grape', value: 'grape' }
                 ]
-            }
+            };
+    },
+    methods: {
+        fechItems(){
+            dbModule.get("/product")
+            .then(response => {
+                this.items = response.data;
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+    },
+    mounted(){
+        this.fechItems();
     },
     components: {
         navBarShop,

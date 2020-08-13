@@ -1,0 +1,68 @@
+[
+    {
+        "name" : "Chęć do życia",
+        "price" : "21.22",
+        "discount" : "-10%",
+        "categories" : ["penis", "akcesoria", "niechęć do życia"]
+    },
+    {
+        "name" : "Chęć do śmierci",
+        "price" : "21.23",
+        "discount" : "-10%",
+        "categories" : ["penis", "akcesoria"]
+    },
+    {
+        "name" : "Chęć do banany żytnie",
+        "price" : "21.24",
+        "discount" : "-10%",
+        "categories" : ["penis"]
+    },
+    {
+        "name" : "Dzięcoł",
+        "price" : "21.25"
+    },
+    {
+        "name" : "Niewolnicy",
+        "price" : "21.26"
+    },
+    {
+        "name" : "Stop niewolnictwu",
+        "price" : "21.27"
+    },
+    {
+        "name" : "Chęć do banany żytnie",
+        "price" : "21.24",
+        "discount" : "-10%",
+        "categories" : ["penis"]
+    },
+    {
+        "name" : "Dzięcoł",
+        "price" : "21.25"
+    },
+    {
+        "name" : "Niewolnicy",
+        "price" : "21.26"
+    },
+    {
+        "name" : "Stop niewolnictwu",
+        "price" : "21.27"
+    },
+    {
+        "name" : "Chęć do banany żytnie",
+        "price" : "21.24",
+        "discount" : "-10%",
+        "categories" : ["penis"]
+    },
+    {
+        "name" : "Dzięcoł",
+        "price" : "21.25"
+    },
+    {
+        "name" : "Niewolnicy",
+        "price" : "21.26"
+    },
+    {
+        "name" : "Stop niewolnictwu",
+        "price" : "21.27"
+    }
+]
