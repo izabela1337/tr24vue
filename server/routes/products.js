@@ -9,26 +9,31 @@ db.insert(productList);
 var getSomeItems = function(query){
   let result = {
     name: new RegExp(query.name, 'i'),
-    price: new RegExp(query.price, "i")
+    price: new RegExp(query.price, "i"),
+    desc: new RegExp(query.desc, 'i')
   };
   return result;
 };
 
-// var searchItems = function(query){
-//   let result = {
-//     ca
-//   }
-// }
+var searchNames = function(query){
+  let result = {
+    name: new RegExp(query, 'i')
+  };
+  return result;
+};
 
-/* GET users listing. */
-router.get('/kek', function(req, res, next) {
-  db.find({categories: 'akcesoria' }, function(err, response) {
+//search products
+router.get('/search/:nameQuery', function(req, res, next) {
+  db.find(searchNames(req.params.nameQuery), function(err, response) {
+    console.log(req.params.nameQuery)
     res.send(response);
   })
 });
 
 router.get('/', function(req, res, next) {
-  db.find(getSomeItems(req.query), function(err, response) {
+  console.log(req.query.limit);
+  console.log(req.query.offset);
+  db.find(getSomeItems(req.query)).skip(req.query.offset).limit(req.query.limit).sort({name: 1}).exec(function(err, response) {
     res.send(response);
   })
 });

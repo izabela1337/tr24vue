@@ -2,11 +2,50 @@
 <span>
     <navBarShop />
     <b-container class="mainContainer">
+        <b-container class="filtersInfoBox">
+            <b-tabs content-class="mt-3" fill>
+                <b-tab title="Kategoria 1" style="text-align:left;">
+                    <b-row>
+                        <b-col md="4"> 
+                            <h6>Podkategoria 1</h6>
+                            <ul>
+                                <li><router-link to="/shop">Siała baba mak</router-link></li>
+                                <li>Nie wiedziała jak</li>
+                                <li>A dziad wiedział</li>
+                                <li>Nie powiedział</li>
+                            </ul>
+                        </b-col>
+                        <b-col md="4"> 
+                            <h6>Podkategoria 2</h6>
+                            <ul>
+                                <li>Siała baba mak</li>
+                                <li>Nie wiedziała jak</li>
+                                <li>A dziad wiedział</li>
+                                <li>Nie powiedział</li>
+                            </ul>
+                        </b-col>
+                        <b-col md="4"> 
+                            <h6>Podkategoria 3</h6>
+                            <ul>
+                                <li>Siała baba mak</li>
+                                <li>Nie wiedziała jak</li>
+                                <li>A dziad wiedział</li>
+                                <li>Nie powiedział</li>
+                            </ul>
+                        </b-col>
+                    </b-row>
+                </b-tab>
+                <b-tab title="Kategoria 2"><p>I'm the second tab</p></b-tab>
+                <b-tab title="Kategoria 3"><p>I'm a disabled tab!</p></b-tab>
+                <b-tab title="Kategoria 3"><p>I'm a disabled tab!</p></b-tab>
+            </b-tabs>
+        </b-container>
         <b-row>
             <b-col cols="3">
                 <b-container class="sideBar">
                     <label>Szukaj po nazwie</label>
-                    <b-form-input v-model="text" placeholder="Wyszukajcośtam"></b-form-input>
+                    <b-form-input v-model="query" placeholder="Wyszukajcośtam" v-on:keyup.enter="filterResults" style="margin-bottom:10px"></b-form-input>
+                    <b-button type="submit" v-on:click="filterResults">Wyszukaj</b-button>
                     <hr>
                     <b-collapse id="collapse-1" class="mt-2" visible>
                         <b-form-group label="Wybierz opcje filtru 1">
@@ -69,6 +108,10 @@
                     img-src="https://i.kym-cdn.com/entries/icons/facebook/000/016/546/hidethepainharold.jpg"
                 ></b-carousel-slide>
                 </b-carousel>
+                <b-container fluid v-if="searchTitle != undefined" class="filtersInfoBox" style="position:sticky;top:10px; z-index:99;background:white;">
+                    <h4>Aktywne filtry:</h4> 
+                        <h5>Nazwa: <b-button v-on:click="clearFilter">{{searchTitle}}<b-icon-x /></b-button></h5>
+                </b-container>
                 <b-row>
                     <b-col lg="3" cols="6" v-for="(items, index) in items" :key="index">
                         <b-card
@@ -81,7 +124,7 @@
                             <b-card-text>
                                 <h4>{{items.name}}</h4>
                                 <h5><b>{{items.price}}</b></h5>
-                            Being alive is suffering. On the other side, you don't have to be alive, so thats good.
+                                {{items.desc}}
                             </b-card-text>
                         <b-button to="/shop/item" variant="primary">Buy shit</b-button>
                         </b-card>
@@ -95,12 +138,15 @@
 <script>
 import navBarShop from '@/components/navbarShop.vue';
 import dbModule from "@/axios/dbModule.js";
-import {BIconCaretDownFill, BIconCaretUpFill} from 'bootstrap-vue';
+import {BIconCaretDownFill, BIconCaretUpFill, BIconX} from 'bootstrap-vue';
 
 export default {
     data(){
         return{
+            query: '',
+            searchTitle: '',
             items: [],
+            allItems: [],
             selected: [],
             options: [
                 { text: 'Orange', value: 'orange' },
@@ -112,21 +158,38 @@ export default {
     },
     methods: {
         fechItems(){
-            dbModule.get("/product")
+            dbModule.get("/product?limit=8")
             .then(response => {
                 this.items = response.data;
             }).catch(err => {
                 console.log(err);
             })
+        },
+        filterResults(){
+            let nameQuery = this.query;
+            this.allItems = this.items;
+            dbModule.get("/product/search/" + nameQuery)
+            .then(response => {
+                this.items = response.data;
+                this.searchTitle = nameQuery;
+            }).catch(err => {
+                console.log(err);
+            })
+        },
+        clearFilter(){
+            this.searchTitle = undefined;
+            this.items = this.allItems;
         }
     },
     mounted(){
+        this.searchTitle = undefined;
         this.fechItems();
     },
     components: {
         navBarShop,
         BIconCaretDownFill,
-        BIconCaretUpFill
+        BIconCaretUpFill,
+        BIconX
     }
 }
 </script>
@@ -144,5 +207,16 @@ export default {
     text-align: left;
     margin: 0;
     padding: 0;
+}
+.filtersInfoBox{
+    border: 1px solid rgba(0,0,0,.125);
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    h5{
+        margin: 0;
+    }
+}
+ul {
+  list-style-type: circle;
 }
 </style>

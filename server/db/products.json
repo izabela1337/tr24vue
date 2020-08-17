@@ -3,66 +3,80 @@
         "name" : "Chęć do życia",
         "price" : "21.22",
         "discount" : "-10%",
-        "categories" : ["penis", "akcesoria", "niechęć do życia"]
+        "categories" : ["penis", "akcesoria", "niechęć do życia"],
+        "desc" : "Aerodynamiczny Harold 1"
     },
     {
         "name" : "Chęć do śmierci",
         "price" : "21.23",
         "discount" : "-10%",
-        "categories" : ["penis", "akcesoria"]
+        "categories" : ["penis", "akcesoria"],
+        "desc" : "Aerodynamiczny Harold 2"
     },
     {
         "name" : "Chęć do banany żytnie",
         "price" : "21.24",
         "discount" : "-10%",
-        "categories" : ["penis"]
+        "categories" : ["penis"],
+        "desc" : "Aerodynamiczny Harold 3"
     },
     {
         "name" : "Dzięcoł",
-        "price" : "21.25"
+        "price" : "21.25",
+        "desc" : "Aerodynamiczny Harold 4"
     },
     {
         "name" : "Niewolnicy",
-        "price" : "21.26"
+        "price" : "21.26",
+        "desc" : "Aerodynamiczny Harold 5"
     },
     {
         "name" : "Stop niewolnictwu",
-        "price" : "21.27"
+        "price" : "21.27",
+        "desc" : "Aerodynamiczny Harold 6"
     },
     {
         "name" : "Chęć do banany żytnie",
         "price" : "21.24",
         "discount" : "-10%",
-        "categories" : ["penis"]
+        "categories" : ["penis"],
+        "desc" : "Aerodynamiczny Harold 7"
     },
     {
         "name" : "Dzięcoł",
-        "price" : "21.25"
+        "price" : "21.25",
+        "desc" : "Aerodynamiczny Harold 8"
     },
     {
         "name" : "Niewolnicy",
-        "price" : "21.26"
+        "price" : "21.26",
+        "desc" : "Aerodynamiczny Harold 9"
     },
     {
         "name" : "Stop niewolnictwu",
-        "price" : "21.27"
+        "price" : "21.27",
+        "desc" : "Aerodynamiczny Harold 10"
     },
     {
         "name" : "Chęć do banany żytnie",
         "price" : "21.24",
         "discount" : "-10%",
-        "categories" : ["penis"]
+        "categories" : ["penis"],
+        "desc" : "Aerodynamiczny Harold 11"
     },
     {
         "name" : "Dzięcoł",
-        "price" : "21.25"
+        "price" : "21.25",
+        "desc" : "Aerodynamiczny Harold 12"
     },
     {
         "name" : "Niewolnicy",
-        "price" : "21.26"
+        "price" : "21.26",
+        "desc" : "Aerodynamiczny Harold 13"
     },
     {
         "name" : "Stop niewolnictwu",
-        "price" : "21.27"
+        "price" : "21.27",
+        "desc" : "Aerodynamiczny Harold 14"
     }
 ]
