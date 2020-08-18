@@ -1,0 +1,27 @@
+{
+    "categories" : [ 
+        {
+            "banany" : [
+                {
+                    "Zielone" : ["ładne", "brzydkie" , "średnie", "ochydne"],
+                    "Żółte" : ["ładne", "brzydkie", "ochydne", "śrenie"],
+                    "Niebieskie" : ["ładne", "brzydkie", "ochydne", "śrenie"]
+                }
+            ],
+            "pomarańcze" : [
+                {
+                    "Zielone" : ["ładne", "brzydkie" , "średnie", "ochydne"],
+                    "Żółte" : ["ładne", "brzydkie", "ochydne", "śrenie"],
+                    "Niebieskie" : ["ładne", "brzydkie", "ochydne", "śrenie"]
+                }
+            ],
+            "Jabłka" : [
+                {
+                    "Zielone" : ["ładne", "brzydkie" , "średnie", "ochydne"],
+                    "Żółte" : ["ładne", "brzydkie", "ochydne", "śrenie"],
+                    "Niebieskie" : ["ładne", "brzydkie", "ochydne", "śrenie"]
+                }
+            ]
+        }
+    ]
+}

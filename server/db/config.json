@@ -1,0 +1,14 @@
+{
+    "cat1" : [
+        {
+            "name": "wrr",
+            "subCats" : ["i", "want", "2", "die"]
+        }
+    ],
+    "cat2" : [
+        {
+            "name" : "Jabłka",
+            "subCats" : ["living", "is", "not", "worth", "it"]
+        }
+    ]
+}

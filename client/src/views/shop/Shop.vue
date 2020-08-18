@@ -7,7 +7,7 @@
                 <b-tab title="Kategoria 1" style="text-align:left;">
                     <b-row>
                         <b-col md="4"> 
-                            <h6>Podkategoria 1</h6>
+                            <h6>{{catConfig.cat1}} </h6>
                             <ul>
                                 <li><router-link to="/shop">Siała baba mak</router-link></li>
                                 <li>Nie wiedziała jak</li>
@@ -87,16 +87,16 @@
             <b-col cols="9" class="mainContent">
                 <b-carousel
                 id="carousel-1"
-                v-model="slide"
                 :interval="4000"
                 controls
                 indicators
                 background="#ababab"
                 img-width="1024"
                 img-height="480"
-                style="text-shadow: 1px 1px 2px #333; margin: 10px 0 10px"
+                style="text-shadow: 1px 1px 2px #333; margin: 10px 0 10px">
+                <!-- v-model="slide"
                 @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd">
+                @sliding-end="onSlideEnd" -->
                 <b-carousel-slide
                     caption="First slide"
                     text="Nulla vitae elit libero, a pharetra augue mollis interdum."
@@ -143,6 +143,7 @@ import {BIconCaretDownFill, BIconCaretUpFill, BIconX} from 'bootstrap-vue';
 export default {
     data(){
         return{
+            catConfig : Object,
             query: '',
             searchTitle: '',
             items: [],
@@ -165,6 +166,15 @@ export default {
                 console.log(err);
             })
         },
+        fechConfig(){
+            dbModule.get('/config')
+            .then(response => {
+                this.catConfig = response.data;
+                console.log(typeof(this.catConfig))
+            }).catch(err => {
+                console.log(err);
+            })
+        },
         filterResults(){
             let nameQuery = this.query;
             this.allItems = this.items;
@@ -183,6 +193,7 @@ export default {
     },
     mounted(){
         this.searchTitle = undefined;
+        this.fechConfig();
         this.fechItems();
     },
     components: {

@@ -11,7 +11,7 @@
                     <b-nav-item to="/contact">Kontakt</b-nav-item>
                 </b-navbar-nav>
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item to="/shop">Sklep<b-badge>nowe!</b-badge></b-nav-item>
+                    <b-nav-item to="/shop">Sklep <b-badge>nowe!</b-badge></b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
