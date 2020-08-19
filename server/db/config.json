@@ -1,14 +1,26 @@
-{
-    "cat1" : [
-        {
-            "name": "wrr",
-            "subCats" : ["i", "want", "2", "die"]
+[
+    {
+        "name" : "Akcesoria",
+        "subcats" : {
+            "Zielone" : ["i", "want", "2", "die"],
+            "Żółte" : ["dzis", "polecamy", "handel", "ludźmi"],
+            "Pisanie" : ["Długopisy", "Ołówki", "Pióra", "Mazaki"]
         }
-    ],
-    "cat2" : [
-        {
-            "name" : "Jabłka",
-            "subCats" : ["living", "is", "not", "worth", "it"]
+    },
+    {
+        "name" : "Marchewki",
+        "subcats" : {
+            "Zielone" : ["i", "want", "2", "die"],
+            "Żółte" : ["i", "want", "2", "die"],
+            "Niebieskie" : ["i", "want", "2", "die"]
         }
-    ]
-}
+    },
+    {
+        "name" : "Pomarańcze",
+        "subcats" : {
+            "Zielone" : ["i", "want", "2", "die"],
+            "Żółte" : ["i", "want", "2", "die"],
+            "Niebieskie" : ["i", "want", "2", "die"]
+        }
+    }
+]

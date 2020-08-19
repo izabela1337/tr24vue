@@ -6,7 +6,7 @@ var Datastore = require('nedb');
 var db = new Datastore();
 db.insert(productList);
 
-var getSomeItems = function(query){
+const getSomeItems = function(query){
   let result = {
     name: new RegExp(query.name, 'i'),
     price: new RegExp(query.price, "i"),
@@ -15,12 +15,18 @@ var getSomeItems = function(query){
   return result;
 };
 
-var searchNames = function(query){
+const searchNames = function(query){
   let result = {
     name: new RegExp(query, 'i')
   };
   return result;
 };
+
+const singleItem = function(query){
+  let result = {
+    _id: new RegExp(query, 'i')
+  }
+}
 
 //search products
 router.get('/search/:nameQuery', function(req, res, next) {
@@ -30,6 +36,7 @@ router.get('/search/:nameQuery', function(req, res, next) {
   })
 });
 
+//get all with limit, offset and sorting
 router.get('/', function(req, res, next) {
   console.log(req.query.limit);
   console.log(req.query.offset);
@@ -37,5 +44,12 @@ router.get('/', function(req, res, next) {
     res.send(response);
   })
 });
+
+//get one product (/item page)
+router.get('/item/:itemID', function(req, res, next) {
+  db.find(singleItem(req.params.itemID).exec(function(err, response) {
+    res.send(response);
+  }))
+})
 
 module.exports = router;

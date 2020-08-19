@@ -3,21 +3,21 @@
         "name" : "Chęć do życia",
         "price" : "21.22",
         "discount" : "-10%",
-        "categories" : ["penis", "akcesoria", "niechęć do życia"],
+        "categories" : ["akcesoria", "pisanie", "długopisy"],
         "desc" : "Aerodynamiczny Harold 1"
     },
     {
         "name" : "Chęć do śmierci",
         "price" : "21.23",
         "discount" : "-10%",
-        "categories" : ["penis", "akcesoria"],
+        "categories" : ["akcesoria", "pisanie", "ołówki"],
         "desc" : "Aerodynamiczny Harold 2"
     },
     {
         "name" : "Chęć do banany żytnie",
         "price" : "21.24",
         "discount" : "-10%",
-        "categories" : ["penis"],
+        "categories" : ["akcesoria", "pisanie", "pióra"],
         "desc" : "Aerodynamiczny Harold 3"
     },
     {

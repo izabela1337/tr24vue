@@ -6,7 +6,7 @@
             <b-collapse id="navCol" isNav>
                 <b-navbar-nav>
                     <b-nav-item to="/shop">Główna</b-nav-item>
-                    <b-nav-item to="/">Dostawa</b-nav-item>
+                    <b-nav-item to="/bebnis">Dostawa</b-nav-item>
                     <b-nav-item to="/cart" class="cartLink">Koszyk <b-icon-cart3 /></b-nav-item>
                 </b-navbar-nav>
                 <b-navbar-nav class="ml-auto">
@@ -29,7 +29,7 @@ export default {
 .topbar{
     background-color: #5C55AF;
 }
-.router-link-exact-active{
+.router-link-active{
     color: white!important;
 }
 .cartLink .nav-link{

@@ -4,40 +4,19 @@
     <b-container class="mainContainer">
         <b-container class="filtersInfoBox">
             <b-tabs content-class="mt-3" fill>
-                <b-tab title="Kategoria 1" style="text-align:left;">
+                <b-tab :title="catConfig.name" style="text-align:left;" v-for="(catConfig, index) in catConfig" :key="index">
                     <b-row>
-                        <b-col md="4"> 
-                            <h6>{{catConfig.cat1}} </h6>
+                        <b-col md="4" v-for="(value, key, index) in catConfig.subcats" :key="index"> 
+                            <h6>{{key}}</h6>
                             <ul>
-                                <li><router-link to="/shop">Siała baba mak</router-link></li>
-                                <li>Nie wiedziała jak</li>
-                                <li>A dziad wiedział</li>
-                                <li>Nie powiedział</li>
-                            </ul>
-                        </b-col>
-                        <b-col md="4"> 
-                            <h6>Podkategoria 2</h6>
-                            <ul>
-                                <li>Siała baba mak</li>
-                                <li>Nie wiedziała jak</li>
-                                <li>A dziad wiedział</li>
-                                <li>Nie powiedział</li>
-                            </ul>
-                        </b-col>
-                        <b-col md="4"> 
-                            <h6>Podkategoria 3</h6>
-                            <ul>
-                                <li>Siała baba mak</li>
-                                <li>Nie wiedziała jak</li>
-                                <li>A dziad wiedział</li>
-                                <li>Nie powiedział</li>
+                                <li><router-link :to="'?cat=' + value[0]">{{value[0]}}</router-link></li>
+                                <li><router-link :to="'?cat=' + value[1]">{{value[1]}}</router-link></li>
+                                <li><router-link :to="'?cat=' + value[2]">{{value[2]}}</router-link></li>
+                                <li><router-link :to="'?cat=' + value[3]">{{value[3]}}</router-link></li>
                             </ul>
                         </b-col>
                     </b-row>
                 </b-tab>
-                <b-tab title="Kategoria 2"><p>I'm the second tab</p></b-tab>
-                <b-tab title="Kategoria 3"><p>I'm a disabled tab!</p></b-tab>
-                <b-tab title="Kategoria 3"><p>I'm a disabled tab!</p></b-tab>
             </b-tabs>
         </b-container>
         <b-row>
