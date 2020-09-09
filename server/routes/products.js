@@ -28,6 +28,12 @@ const singleItem = function(query){
   }
 }
 
+const tagSearch = function(query){
+  let result = {
+    categories: new RegExp(query, 'i')
+  }
+}
+
 //search products
 router.get('/search/:nameQuery', function(req, res, next) {
   db.find(searchNames(req.params.nameQuery), function(err, response) {
@@ -50,6 +56,14 @@ router.get('/item/:itemID', function(req, res, next) {
   db.find(singleItem(req.params.itemID).exec(function(err, response) {
     res.send(response);
   }))
-})
+});
+
+//get results based on tags
+router.get('/category/:cat', function(req, res, next) {
+  console.log(req.params.cat);
+  db.find({$elemMatch: {categories: ["akcesoria", "pisanie"]}}, function(err, response) {
+    res.send(response);
+  })
+});
 
 module.exports = router;

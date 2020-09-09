@@ -94,7 +94,7 @@
                 <b-row>
                     <b-col lg="3" cols="6" v-for="(items, index) in items" :key="index">
                         <b-card
-                        img-src="https://pbs.twimg.com/profile_images/814599911060766724/0ainlmNK_400x400.jpg"
+                        :img-src="'http://lorempixel.com/400/400/business/' + items.id"
                         img-alt="Image"
                         img-top
                         tag="article"
@@ -154,6 +154,14 @@ export default {
                 console.log(err);
             })
         },
+        fechCategory(){
+            dbModule.get('/product/category/' + this.$route.query.cat)
+            .then(response => {
+                this.items = response.data;
+            }).catch(err => {
+                console.log(err)
+            });
+        },
         filterResults(){
             let nameQuery = this.query;
             this.allItems = this.items;
@@ -173,7 +181,13 @@ export default {
     mounted(){
         this.searchTitle = undefined;
         this.fechConfig();
-        this.fechItems();
+        console.log(this.$route.query.cat)
+        if(this.$route.query.cat){
+            this.fechCategory();
+        } else {
+            this.fechItems();
+        }
+
     },
     components: {
         navBarShop,
