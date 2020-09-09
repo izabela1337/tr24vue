@@ -9,7 +9,7 @@
                         <b-col md="4" v-for="(value, key, index) in catConfig.subcats" :key="index"> 
                             <h6>{{key}}</h6>
                             <ul>
-                                <li><router-link :to="'?cat=' + value[0]">{{value[0]}}</router-link></li>
+                                <li><a @click="mounted()" :href="'?cat=' + value[0]">{{value[0]}}</a></li>
                                 <li><router-link :to="'?cat=' + value[1]">{{value[1]}}</router-link></li>
                                 <li><router-link :to="'?cat=' + value[2]">{{value[2]}}</router-link></li>
                                 <li><router-link :to="'?cat=' + value[3]">{{value[3]}}</router-link></li>
@@ -149,7 +149,6 @@ export default {
             dbModule.get('/config')
             .then(response => {
                 this.catConfig = response.data;
-                console.log(typeof(this.catConfig))
             }).catch(err => {
                 console.log(err);
             })
@@ -158,6 +157,7 @@ export default {
             dbModule.get('/product/category/' + this.$route.query.cat)
             .then(response => {
                 this.items = response.data;
+                console.log("123")
             }).catch(err => {
                 console.log(err)
             });

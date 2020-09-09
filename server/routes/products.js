@@ -61,7 +61,8 @@ router.get('/item/:itemID', function(req, res, next) {
 //get results based on tags
 router.get('/category/:cat', function(req, res, next) {
   console.log(req.params.cat);
-  db.find({$elemMatch: {categories: ["akcesoria", "pisanie"]}}, function(err, response) {
+  let regExedQuery = req.params.cat.toLowerCase();
+  db.find({categories: {$in: [ regExedQuery ]}}, function(err, response) {
     res.send(response);
   })
 });
