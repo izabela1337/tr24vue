@@ -41,7 +41,7 @@
         </b-row>
       </b-container>
       <b-container class="strpped">
-        <b-row style="background: #ece7f0" class="padinBoxes">
+        <b-row class="padinBoxes strip-dark">
           <b-col md='6' class="vCenter">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
@@ -59,7 +59,7 @@
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
         </b-row>
-        <b-row style="background: #ece7f0" class="padinBoxes">
+        <b-row class="padinBoxes strip-dark">
           <b-col md='6' class="vCenter">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore voluptatum fugiat excepturi, modi aliquam dignissimos sit dolor porro ullam consequuntur accusantium atque nostrum animi perferendis officia. Reprehenderit ut ullam, provident harum impedit perferendis laborum libero, voluptatibus delectus suscipit doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, vitae voluptatum fuga nam facilis necessitatibus illo consequatur error hic consectetur.</p>
           </b-col>
@@ -103,6 +103,10 @@ export default {
 .padinBoxes{
   padding: 1rem;
   margin:0;
+}
+.strip-dark{
+  background: #6ABECF;
+  color: white;
 }
 .strpped{
   margin: 0;

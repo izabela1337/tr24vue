@@ -1,7 +1,7 @@
 <template>
     <b-container fluid class="topbar">
         <b-navbar toggleable="lg" type="dark">
-            <b-navbar-brand href="#">TransBit24</b-navbar-brand>
+            <b-navbar-brand to="/">TransBit24</b-navbar-brand>
             <b-navbar-toggle target="navCol"/>
             <b-collapse id="navCol" isNav>
                 <b-navbar-nav>
@@ -24,7 +24,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topbar{
-    background-color: #5C55AF;
+    background-color: #296A77;
 }
 .router-link-exact-active{
     color: white!important;

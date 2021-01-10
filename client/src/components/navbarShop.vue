@@ -27,7 +27,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topbar{
-    background-color: #5C55AF;
+    background-color: #296A77;
 }
 .router-link-active{
     color: white!important;

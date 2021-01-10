@@ -2,7 +2,7 @@
     {
         "name" : "Ołówek XXL",
         "id" : 10,
-        "price" : "21.22",
+        "price" : 21.22,
         "discount" : "-10%",
         "categories" : ["akcesoria", "pisanie", "długopisy"],
         "desc" : "Aerodynamiczny Harold 1"
@@ -10,7 +10,7 @@
     {
         "name" : "Długopis XXl",
         "id" : 9,
-        "price" : "21.23",
+        "price" : 21.23,
         "discount" : "-10%",
         "categories" : ["akcesoria", "pisanie", "ołówki"],
         "desc" : "Aerodynamiczny Harold 2"
@@ -18,7 +18,7 @@
     {
         "name" : "Segregator XS",
         "id" : 8,
-        "price" : "21.24",
+        "price" : 21.24,
         "discount" : "-10%",
         "categories" : ["akcesoria", "pisanie", "pióra"],
         "desc" : "Aerodynamiczny Harold 3"
@@ -26,19 +26,21 @@
     {
         "name" : "Dzięcoł",
         "id" : 7,
-        "price" : "21.25",
+        "price" : 21.25,
+        "categories" : ["akcesoria", "pisanie", "pióra"],
         "desc" : "Aerodynamiczny Harold 4"
     },
     {
         "name" : "Niewolnicy",
         "id" : 6, 
-        "price" : "21.26",
+        "price" : 21.26,
         "desc" : "Aerodynamiczny Harold 5"
     },
     {
         "name" : "Stop niewolnictwu",
         "id" : 5,
-        "price" : "21.27",
+        "price" : 21.27,
+        "categories" : ["penis"],
         "desc" : "Aerodynamiczny Harold 6"
     },
     {
@@ -53,6 +55,7 @@
         "name" : "Karta dźwiękowa",
         "id" : 3,
         "price" : "21.25",
+        "categories" : ["penis"],
         "desc" : "Aerodynamiczny Harold 8"
     },
     {
@@ -69,6 +72,7 @@
     },
     {
         "name" : "Chęć do banany żytnie",
+        "id" : 69,
         "price" : "21.24",
         "discount" : "-10%",
         "categories" : ["penis"],
@@ -76,17 +80,23 @@
     },
     {
         "name" : "Dzięcoł",
+        "id" : 14,
         "price" : "21.25",
+        "categories" : ["penis"],
         "desc" : "Aerodynamiczny Harold 12"
     },
     {
         "name" : "Niewolnicy",
+        "id" : 15,
         "price" : "21.26",
+        "categories" : ["penis"],
         "desc" : "Aerodynamiczny Harold 13"
     },
     {
         "name" : "Stop niewolnictwu",
+        "id" : 16,
         "price" : "21.27",
+        "categories" : ["penis"],
         "desc" : "Aerodynamiczny Harold 14"
     }
 ]

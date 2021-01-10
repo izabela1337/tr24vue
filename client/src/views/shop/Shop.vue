@@ -73,9 +73,6 @@
                 img-width="1024"
                 img-height="480"
                 style="text-shadow: 1px 1px 2px #333; margin: 10px 0 10px">
-                <!-- v-model="slide"
-                @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd" -->
                 <b-carousel-slide
                     caption="First slide"
                     text="Nulla vitae elit libero, a pharetra augue mollis interdum."
@@ -94,7 +91,7 @@
                 <b-row>
                     <b-col lg="3" cols="6" v-for="(items, index) in items" :key="index">
                         <b-card
-                        :img-src="'http://lorempixel.com/400/400/business/' + items.id"
+                        :img-src="'https://loremflickr.com/400/400?lock=' + items.id"
                         img-alt="Image"
                         img-top
                         tag="article"
@@ -105,7 +102,7 @@
                                 <h5><b>{{items.price}}</b></h5>
                                 {{items.desc}}
                             </b-card-text>
-                        <b-button to="/shop/item" variant="primary">Buy shit</b-button>
+                        <b-button :to="'/shop/item/' + items.id" variant="primary">Buy shit</b-button>
                         </b-card>
                     </b-col>
                 </b-row>
@@ -138,7 +135,7 @@ export default {
     },
     methods: {
         fechItems(){
-            dbModule.get("/product?limit=8")
+            dbModule.get("/products?limit=8")
             .then(response => {
                 this.items = response.data;
             }).catch(err => {
@@ -154,7 +151,7 @@ export default {
             })
         },
         fechCategory(){
-            dbModule.get('/product/category/' + this.$route.query.cat)
+            dbModule.get('/products/category/' + this.$route.query.cat)
             .then(response => {
                 this.items = response.data;
                 console.log("123")
@@ -165,7 +162,7 @@ export default {
         filterResults(){
             let nameQuery = this.query;
             this.allItems = this.items;
-            dbModule.get("/product/search/" + nameQuery)
+            dbModule.get("/products/search/" + nameQuery)
             .then(response => {
                 this.items = response.data;
                 this.searchTitle = nameQuery;

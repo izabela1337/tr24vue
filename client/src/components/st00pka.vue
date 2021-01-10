@@ -20,6 +20,6 @@ footer{
     color: white;
     padding: 2rem;
     text-align: center;
-    background-color: #5C55AF;
+    background-color: #296A77;
 }
 </style>

@@ -24,9 +24,10 @@ const searchNames = function(query){
 
 const singleItem = function(query){
   let result = {
-    _id: new RegExp(query, 'i')
-  }
-}
+    id: parseInt(query, 10)
+  };
+  return result;
+};
 
 const tagSearch = function(query){
   let result = {
@@ -44,8 +45,6 @@ router.get('/search/:nameQuery', function(req, res, next) {
 
 //get all with limit, offset and sorting
 router.get('/', function(req, res, next) {
-  console.log(req.query.limit);
-  console.log(req.query.offset);
   db.find(getSomeItems(req.query)).skip(req.query.offset).limit(req.query.limit).sort({name: 1}).exec(function(err, response) {
     res.send(response);
   })
@@ -53,9 +52,9 @@ router.get('/', function(req, res, next) {
 
 //get one product (/item page)
 router.get('/item/:itemID', function(req, res, next) {
-  db.find(singleItem(req.params.itemID).exec(function(err, response) {
+  db.find(singleItem(req.params.itemID), function(err, response) {
     res.send(response);
-  }))
+  })
 });
 
 //get results based on tags
